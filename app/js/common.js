@@ -159,7 +159,7 @@ $(function() {
 
       myPlacemarkWithContent = new ymaps.Placemark([43.608608, 39.993164], {
         // hintContent: 'Ельф кондитер',
-        balloonContent: 'г. Донецк, Ростовская область, пер. Второй Аварийный. 10',
+        balloonContent: '',
       }, {
         // Опции.
         // Необходимо указать данный тип макета.
