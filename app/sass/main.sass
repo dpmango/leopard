@@ -82,16 +82,20 @@ a
 	border-radius: 34px
 	&:hover,
 	&:focus,
+		background-color: #E9E9E9
+		border-color: #E9E9E9
 	&.active
 		background-color: $accent
 		border-color: $accent
+
 .btn-fill
 	background-color: $accent
 	border-color: $accent
 	&:hover,
 	&:focus,
 	&.active
-		background-color: #fff
+		background-color: #F0BD00
+		border-color: #F0BD00
 		color: $text
 		// color: #fff
 
@@ -184,7 +188,7 @@ a
 		left: 0
 		height: 816px
 		width: 100%
-		background: url(../img/intro_bg.jpg) 50% 50% no-repeat
+		background: url(../img/intro_bg.jpg) 50% 10% no-repeat
 		background-size: cover
 		z-index: -1
 		&:after
@@ -196,6 +200,7 @@ a
 			left: -15px
 			right: -15px
 			height: 100%
+
 	&__title
 		max-width: 600px
 		height: 700px
@@ -222,7 +227,7 @@ a
 			color: $accent
 			border-bottom-color: $accent
 		.video_btn__ico
-			transform: scale(1.2)
+			background-color: #F0BD00
 
 	&__ico
 		width: 74px
@@ -231,7 +236,6 @@ a
 		border-radius: 50%
 		padding: 27px 0px 0px 30px
 		box-shadow: 0px 10px 32px rgba(#FFCE1A, 0.5)
-		transform: scale(1)
 		@extend %anim
 	&__label
 		color: #fff
@@ -257,7 +261,6 @@ a
 		padding: 0 15px
 		&:hover
 			.benefits__link
-				border-bottom-color: transparent 
 				color: $green
 	&__ico
 		background: url(../img/svg/benefits_bg.svg) 0 0 no-repeat
@@ -278,9 +281,6 @@ a
 		padding-bottom: 4px
 		display: inline
 		@extend %anim
-		&:hover
-			border-bottom-color: transparent 
-			color: $green
 
 
 .s_about
@@ -375,7 +375,7 @@ a
 				&:after
 					display: none
 			&:before
-				content: ''
+				content: ' '
 				position: absolute
 				width: 26px
 				height: 26px
@@ -384,9 +384,11 @@ a
 				left: 50%
 				top: -20px
 				transform: translate(-50%, -50%)
-				background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNS4yNSAxMC41QzQuODEyNSAxMC41IDQuMzc1IDEwLjMyNSA0LjAyNSA5Ljk3NUwwLjUyNSA2LjQ3NUMtMC4xNzUgNS43NzUgLTAuMTc1IDQuNzI1IDAuNTI1IDQuMDI1QzEuMjI1IDMuMzI1IDIuMzYyNSAzLjMyNSAyLjk3NSA0LjAyNUw1LjI1IDYuM0wxMS4wMjUgMC41MjVDMTEuNzI1IC0wLjE3NSAxMi43NzUgLTAuMTc1IDEzLjQ3NSAwLjUyNUMxNC4xNzUgMS4yMjUgMTQuMTc1IDIuMjc1IDEzLjQ3NSAyLjk3NUw2LjQ3NSA5Ljk3NUM2LjEyNSAxMC4zMjUgNS42ODc1IDEwLjUgNS4yNSAxMC41WiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=) center center no-repeat
+				background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAuCAYAAAB5/AqlAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkZGNzJDQ0ZGM0Y2ODExRTlBNzNFRUY4NzVFRjlGNTg1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkZGNzJDRDAwM0Y2ODExRTlBNzNFRUY4NzVFRjlGNTg1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkY3MkNDRkQzRjY4MTFFOUE3M0VFRjg3NUVGOUY1ODUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RkY3MkNDRkUzRjY4MTFFOUE3M0VFRjg3NUVGOUY1ODUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5GAcDXAAABWUlEQVR42uTZ8RGCIBQGcHCCRnCERrANGsE2aIQ2aARGcATbQDepDejRYWeeJnc+4EO+O87rHx4/MSIRIuForWtqnf7Nk5qiVorUQ4gDtVb/jwHXqSM77Z46B+Qws+XekUNUDsjPrMoUkHRpqR239FPkgISGciJhodxISi8zQJpc9ra6zqXLAYm1WfCI/D7+cqFwRZfKfnxRe0gp+4S+k2bMp8UxU9GrvRNzacd3KJWZnCuqHDs6M0IVKnK9M2Bkxd4pGtIWbbx1joK0hf0XiY1kgDoXi4pkgq4WjY5khC4Wh0BuXIxWBwGD3PDzsjoYKOQIe9fYYdmk+HrM8JDAWH4kINYfEgjrHwmADYeMiA2PjICNhwyIjY8MgMVBQu5dA2A5/wRgIplfUdY5nEDjIxmw6SA3YNNDTrDKYXWtxB5i31Q0k7MbM9s3e5AUNZIGIXJIITLJW4ABANq12u4tOC1hAAAAAElFTkSuQmCC')
 				background-color: #fff
-				background-size: 0 0
+				background-position: center center
+				background-repeat: no-repeat
+				background-size: 0px 0px
 				z-index: 1
 				@extend %anim
 			&:after
@@ -474,9 +476,7 @@ a
 	align-items: center
 	justify-content: center	
 	&:hover
-		background-color: $accent
-		path
-			fill: $green
+		background-color: #0F8646
 	&-prev
 		left: -120px
 		svg
@@ -492,6 +492,7 @@ a
 	left: 0
 	right: 0
 	display: flex
+	flex-wrap: wrap
 	justify-content: center
 	margin-top: 68px
 	li
@@ -545,6 +546,7 @@ a
 			flex-basis: 45%
 
 	&__block
+		position: relative
 		background: #DEECE4
 		border-radius: 10px
 		display: flex
@@ -562,26 +564,38 @@ a
 			width: calc(33.333% - 32px)
 		&-small
 			width: calc(50% - 32px)
-
+	&__info
+		position: absolute
+		bottom: 14px
+		right: 14px
+		width: 18px
+		height: 18px
 	
 .s_sheme
 	color: #fff
 	padding-bottom: 200px
-	background: linear-gradient(180deg,#016737 0,#349f75 100%)
-	background-color: #fff
-	margin-top: 430px
+	margin-top: 250px
 	position: relative
 	z-index: 1
+	&__bg
+		background: url(../img/s_sheme_bg-3.svg) center 0 no-repeat
+		background-size: cover
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: 100%
+		top: -335px
 	&:before
 		content: ''
 		position: absolute
 		bottom: 100%
-		top: -430px
+		top: -465px
 		z-index: -2
 		display: block
-		background:  url(../img/s_sheme_bg.svg) center 0 no-repeat
+		background:  url(../img/s_sheme_bg-2.svg) center 0 no-repeat
 		background-size: cover
-		height: 599px
+		height: 900px
 		width: 100%
 		left: 0
 		z-index: -1
@@ -615,6 +629,23 @@ a
 		margin-right: auto
 		max-width: 100%
 		display: block
+		position: relative
+		z-index: 1
+	&__block
+		position: relative
+		z-index: 1
+		cursor: pointer
+		// &:not(.s_sheme__block-line)
+		// 	fill: #0f0 !important
+		&-line
+			// stroke: #0f0 !important
+			&:hover
+				stroke: #fff !important
+		&:hover
+			&:not(.s_sheme__block-line)
+				fill: $accent !important
+				fill-opacity: 0.75 !important
+				opacity: 1 !important
 
 .s_aviary
 	margin-top: 0px
@@ -658,7 +689,9 @@ a
 		width: 256px
 		padding: 0 15px
 		text-align: center
-
+		&:hover
+			.s_aviary__link
+				color: $green
 	&__ico
 		display: block
 		margin-left: auto
@@ -673,9 +706,7 @@ a
 		padding-bottom: 4px
 		display: inline
 		@extend %anim
-		&:hover
-			border-bottom-color: transparent 
-			color: $green
+
 
 .s_img
 	position: relative
@@ -691,9 +722,26 @@ a
 		margin-right: 247px
 		right: 50%
 		transform: rotate(50deg)
+	&__content
+		position: relative
+		z-index: 1
 	&__bg
 		width: 100%
-
+	&__title
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		z-index: 2
+	&__label
+		cursor: pointer
+		position: relative
+		z-index: 10
+		&:hover,
+		&.active
+			path
+				fill: $accent
 .s_gallary
 	padding: 143px 0 195px
 	position: relative
@@ -725,7 +773,32 @@ a
 		width: 100%
 	.slider__arrow
 		box-shadow: 0px 19px 30px #92C9AB
+
 	.slider__img
+		z-index: 1
+		cursor: pointer
+		padding: 0 16px
+		a
+			display: block
+			position: relative
+			z-index: 1
+			&:after
+				content: ''
+				position: absolute
+				top: 0
+				z-index: 1
+				left: 0
+				border-radius: 10px
+				width: 100%
+				height: 100%
+				background: rgba($green, 0.916) url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTI1LjIgMjIuNEwzMS40IDI4LjZDMzIuMiAyOS40IDMyLjIgMzAuNiAzMS40IDMxLjRDMzEgMzEuOCAzMC42IDMyIDMwIDMyQzI5LjYgMzIgMjkgMzEuOCAyOC42IDMxLjRMMjIuNCAyNS4yQzIwIDI3IDE3LjIgMjggMTQgMjhDNi4yIDI4IDAgMjEuOCAwIDE0QzAgNi4yIDYuMiAwIDE0IDBDMjEuOCAwIDI4IDYuMiAyOCAxNEMyOCAxNy4yIDI3IDIwIDI1LjIgMjIuNFpNMTQgNEM4LjQgNCA0IDguNCA0IDE0QzQgMTkuNiA4LjQgMjQgMTQgMjRDMTkuNiAyNCAyNCAxOS42IDI0IDE0QzI0IDguNCAxOS42IDQgMTQgNFoiIGZpbGw9IndoaXRlIi8+PC9zdmc+) center center no-repeat
+				background-size: 64px 64px
+				opacity: 0
+				@extend %anim
+		&:hover
+			a:after
+				opacity: 1
+				background-size: 32px 32px
 		img
 			border-radius: 10px
 			width: 100%
@@ -736,18 +809,31 @@ a
 		margin-top: 28px
 
 .s_timeline
-	background: url(../img/s_aviary__bg.svg) center 0 no-repeat
-	background-size: 1920px auto
+	// background: url(../img/s_timeline__bg.svg) center 0 no-repeat
+	// background-size: 1920px auto
+	background: linear-gradient(180deg, #fef8f1  0%, #FFFFFF 100%)
 	padding: 141px 0 67px
 	position: relative
 	z-index: 1
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 100%
+		z-index: -1
+		height: 93px
+		background: url(../img/s_timeline__bg.svg) center 0 no-repeat
+		-webkit-background-size: 100% auto
+		background-size: 100% auto
 	&__bg
 		position: absolute
 		z-index: -1
 		opacity: 0.05
 		left: 0
 		width: 100%
-		bottom: -66%
+		bottom: 0px
+		transform: translateY(50%)
 	.mCSB_container
 		display: flex
 		&:before,
@@ -795,18 +881,13 @@ a
 		width: 1120px
 		margin-left: auto
 		margin-right: auto
-	.mCSB_scrollTools
-		// width: 1120px
-		opacity: 1
-		filter: "alpha(opacity=100)"
-		-ms-filter: "alpha(opacity=100)"
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail
 		height: 6px
-		background: #C6DAD1
+		background: #E9DFD3
 		margin: 3px 0
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar
 		height: 12px
-		background-color: #16452F
+		background-color: #959079
 		margin: 0	 auto
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal
 		height: 12px
@@ -981,7 +1062,8 @@ a
 		color: $green
 		border-bottom: 1px dashed $green
 		&:hover
-			border-bottom-color: transparent
+			color: $text
+			// border-bottom-color: transparent
 	&__text
 		font-size: 18px
 		color: #6D6D6D
@@ -991,89 +1073,270 @@ a
 		display: flex
 		align-items: center
 .popup
-	max-width: 800px
+	max-width: 992px
+	max-height: 100%
 	border-radius: 10px
+	width: 100%
+	color: #6D6D6D
+	padding: 87px 80px
+	overflow: hidden
+	margin: 0
+	font-size: 20px
+	line-height: 1.6
+	font-family: $default-font
+	&-short
+		max-width: 704px
+		padding: 68px 57px
+		.popup__text
+			// max-height: calc(100vh - 162px)
+			height: auto
+		.mCSB_scrollTools .mCSB_draggerContainer	
+			right: -10px !important
+	
+
+	&__text
+		// max-height: calc(100vh - 194px)
+		height: auto
+	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+		width: 8px
+		background: #A5A5A5
+	.mCSB_scrollTools .mCSB_draggerRail
+		width: 8px
+		background: #EDEDED
+
+	.mCSB_scrollTools .mCSB_draggerContainer	
+		right: -51px
+	h1, h2, h3, h4, h5, h6
+		font-family: 'Engine', sans-serif
+		color: $text
+		line-height: 1.5
+		margin-bottom: 0.25em
+	h2, h1
+		font-size: 2em
+	h3
+		font-size: 1.8em
+	h4
+		font-size: 1.6em
+	h5
+		font-size: 1.4em
+	h6
+		font-size: 1.2em
+	ul
+		list-style: disc
+		padding-left: 25px
+	ol
+		padding-left: 25px
+		list-style-type: decimal
+	a
+		color: $green
+		border-bottom: 1px dashed $green
+		&:hover
+			border-bottom-color: transparent
 
 
 #mob_map
 	width: 100%
 	height: 100%
-
 #p_map
 	width: 100%
 	height: 100%
-
-
 .s_contact__map_btn
 	display: none
+.fancybox-close-small
+	background-color: #09B458
+	color: #fff
+	opacity: 1
+	width: 42px	
+	height: 42px
+	border-radius: 50%
+	top: 14px
+	right: 14px
+	padding: 0
+	&:hover
+		background-color: #0F8646
+.fancybox-close-small svg
+	opacity: 1
+.fancybox-slide--html
+	padding: 10px
+.fancybox-slide
+	overflow: hidden
+
+.mCSB_scrollTools
+	opacity: 1
+	filter: "alpha(opacity=100)"
+	-ms-filter: "alpha(opacity=100)"
+
+.footer
+	background-color: #1B1B1B
+	color: #7F7F7F
+	padding: 32px 0
+	&__info
+		max-width: 873px
+		margin-left: auto
+		margin-right: auto
+		font-size: 12px
+		line-height: 14px
+		text-align: center
+	
+
+.tooltip_templates
+	display: none
+
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box
+	background: #fff
+	border: none
+	border-radius: 10px
+	box-shadow: 0px 19px 28px rgba(63, 141, 116, 0.432692)
+.tooltipster-sidetip .tooltipster-arrow-border
+	display: none !important
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background
+	border-top-color: #fff !important
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow-background
+	border-bottom-color: #fff !important
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-background
+	border-right-color: #fff !important
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-background
+	border-left-color: #fff !important
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow,
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow
+	height: 30px
+	width: 30px
+	margin-top: -15px
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow,
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow
+	height: 30px
+	width: 30px
+	margin-left: -15px
+.tooltipster-sidetip.tooltipster-bottom .tooltipster-arrow
+	display: none !important
+	
+.tooltipster-sidetip.tooltipster-right .tooltipster-arrow-uncropped
+	left: -15px
+.tooltipster-sidetip.tooltipster-left .tooltipster-arrow-background
+	left: 15px
+.tooltipster-sidetip.tooltipster-top .tooltipster-arrow-background
+	top: 15px
+.tooltipster-sidetip .tooltipster-arrow-background
+	border: 15px solid transparent
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box
+	margin: 15px
+.tooltipster-content
+	overflow: unset
+.s_img__tooltip
+	padding: 0px 15px 35px
+	color: #6D6D6D !important
+	font-size: 16px
+	line-height: 1.625
+	text-align: center
+	&__thumb
+		margin-top: -61px
+	&__title
+		font-family: 'Engine', sans-serif
+		font-size: 40px
+		line-height: 1.5
+		color: $text
 
 
 
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// //////////////////////                                               //////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
-// ///////////////////////////////////////////////////////////////////////////////////////////////
 
 
+.tooltipster-sidetip.tooltipster-noir.tooltipster-noir-sheme .tooltipster-box
+	border: none
+	color: #000
+	background-color: #fff
+	.tooltipster-content
+		color: $text
+		padding: 23px 27px
+
+.s_sheme__tooltip
+	display: flex
+	align-items: center
+	font-family: 'Engine', sans-serif
+	font-size: 32px
+	&__num
+		font-family: $default-font
+		width: 48px
+		flex: 0 0 48px
+		height: 48px
+		text-align: center
+		line-height: 56px
+		margin-right: 23px
+		background-color: $green
+		color: #fff
+		font-size: 32px
+		border-radius: 50%
+
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// //////////////////////                                               //////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////////////////////////////////////////////////////////////////////
+@media (min-width: 1440px)
+	.s_gallary
+		.slider
+			margin-left: -16px
+			margin-right: -16px
+	
 @media (max-width: 1439px)
 	.slider__arrow-prev
 		left: -75px
 	.slider__arrow-next
 		right: -75px
+	.s_sheme__bg
+		width: 1440px
 @media (max-width: 1359px)
 	.slider 
 		margin-left: 75px
@@ -1095,7 +1358,7 @@ a
 	.s_home__bg
 		height: 720px
 		background-position: 90% 0
-
+	
 	.s_about__tabs__descr,
 	.s_roadmap__text
 		font-size: 18px
@@ -1105,8 +1368,8 @@ a
 		font-size: 16px
 	.s_strucrure__block
 		font-size: 16px
-	.s_sheme
-		background: linear-gradient(180deg,#006d3a 0,#349f75 100%)
+	// .s_sheme
+	// 	background: linear-gradient(180deg,#006d3a 0,#349f75 100%)
 	.s_aviary__itm
 		width: 200px
 		flex: 0 0 200px
@@ -1142,10 +1405,15 @@ a
 		width: 300px
 		flex: 0 0 300px
 		margin-left: 30px
-
+	.nav li
+		margin-left: 25px
 @media (max-width: 991px)
 	.header__bars
 		display: block
+	.header .nav
+		order: 3
+	.header__sponsor
+		order: 2
 	.header
 		padding-bottom: 0px
 	.nav 
@@ -1234,7 +1502,6 @@ a
 		height: 850px
 	.s_contact__label
 		width: 60%
-
 @media (max-width: 767px)
 	.benefits
 		flex-wrap: wrap
@@ -1242,10 +1509,15 @@ a
 		width: 50%
 		flex: 0 0 50%
 		margin-bottom: 15px
+	.header__sponsor
+		width: 60px
 	.s_home__bg
 		height: 570px
 	.s_home__bg:after
-		display: none
+		// display: none
+		background-position: 85% 100%
+		background-color: rgba(#07331c, 0.5)
+		background-size: 1440px auto
 	.s_about
 		padding: 50px 0
 	.s_about__tabs__head .btn
@@ -1268,19 +1540,15 @@ a
 		// overflow-x: auto
 		// margin-top: 0
 		.mCSB_container
-				display: flex
-		.mCSB_scrollTools
-			// width: 1120px
-			opacity: 1
-			filter: "alpha(opacity=100)"
-			-ms-filter: "alpha(opacity=100)"
+			display: flex
+		
 		.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail
 			height: 6px
-			background: #C6DAD1
+			background: #E9DFD3
 			margin: 3px 0
 		.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar
 			height: 12px
-			background-color: #16452F
+			background-color: #959079
 			margin: 0	 auto
 		.mCSB_scrollTools.mCSB_scrollTools_horizontal
 			height: 12px
@@ -1336,10 +1604,18 @@ a
 	.s_strucrure__layer-45
 		max-width: 63%
 		flex-basis: 63%	
+	.s_sheme
+		margin-top: 200px
 	.s_sheme .section_title:before
-		width: 100%
-		height: 50vw
+		width: 350px
+		height: 200px
 		background-size: contain
+	.s_sheme:before
+		background-size: 800px auto
+		height: 240px
+		top: -200px
+	.s_sheme__bg
+		top: -55px
 	.s_aviary
 		padding: 50px 0
 	.s_aviary__itm
@@ -1395,6 +1671,20 @@ a
 	.s_contact__map_btn
 		display: inline-flex
 		margin-top: 19px
+	.popup
+		padding: 65px 15px 15px
+		font-size: 16px
+	.popup__text
+		max-height: calc(100vh - 100px)
+	.s_contact__label
+		box-shadow: 0 5px 29px #c2d3ac
+	.mCSB_outside+.mCSB_scrollTools
+		right: 10px
+	.s_gallary .slider__dots
+		position: static
+	.s_timeline:before,
+	.s_aviary:before
+		background-size: 1440px auto
 @media (max-width: 359px)
 	.s_strucrure__block
 		font-size: 10px

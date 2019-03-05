@@ -35,6 +35,7 @@ gulp.task('js', function() {
 		'app/libs/aos-master/dist/aos.js',
 		// 'app/libs/priority-navigation-master/dist/priority-nav.min.js',
 		// 'app/libs/baron-master/baron.min.js',
+		'app/libs/tooltipster-master/dist/js/tooltipster.bundle.min.js',
 		// 'app/libs/lib-head.pack.min.js',
 		// 'app/libs/lib-body.pack.min.js',
 		// 'app/libs/index.min.js',
