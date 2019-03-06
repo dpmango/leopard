@@ -16,31 +16,16 @@ gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/slick-master/slick/slick.min.js',
-		// 'app/libs/compiled-with-examples/parallax.min.js',
-		// 'app/libs/fullPage.js-master/dist/jquery.fullpage.min.js',
-		// 'app/libs/Inputmask-4.x/dist/jquery.inputmask.bundle.js',
-		// 'app/libs/jquery-spincrement-master/jquery.spincrement.min.js',
-		// 'app/libs/selectize.js-master/dist/js/standalone/selectize.min.js',
-		// 'app/libs/fancybox-master/dist/jquery.fancybox.min.js',
-		// 'app/libs/Magnific-Popup-master/dist/jquery.magnific-popup.min.js',
 		'app/libs/anchor.js',
-		// 'app/libs/jQuery-viewport-checker-master/dist/jquery.viewportchecker.min.js',
-		// 'app/libs/greensock-js/src/minified/TweenMax.min.js',
-		// 'app/libs/greensock-js/src/minified/TimelineMax.min.js',
-		// 'app/libs/timeTo/jquery.time-to.js',
 		'app/libs/malihu-custom-scrollbar-plugin-3.1.5/jquery.mCustomScrollbar.concat.min.js',
-		// 'app/libs/instafeed.min.js',
 		'app/libs/fancybox-master/dist/jquery.fancybox.min.js',
 		'app/libs/svgxuse-master/svgxuse.min.js',
 		'app/libs/aos-master/dist/aos.js',
-		// 'app/libs/priority-navigation-master/dist/priority-nav.min.js',
-		// 'app/libs/baron-master/baron.min.js',
 		'app/libs/tooltipster-master/dist/js/tooltipster.bundle.min.js',
-		// 'app/libs/lib-head.pack.min.js',
-		// 'app/libs/lib-body.pack.min.js',
-		// 'app/libs/index.min.js',
+		'app/libs/scrollmonitor.js',
+		'app/libs/anime-master/lib/anime.js',
 		'app/js/common.js', // Always at the end
-		]) 
+		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))

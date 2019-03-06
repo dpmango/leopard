@@ -1,7 +1,0 @@
-**/.*
-**/*.json
-/src
-/node_modules
-/bower_components
-/demo/.npm/node_modules
-Gruntfile.js
