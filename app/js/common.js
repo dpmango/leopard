@@ -90,24 +90,41 @@ $(function() {
     "touch": false
   });
 
+  function isMobile(){
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      return true
+    } else {
+      return false
+    }
+  }
 
-  $('.s_img__label').tooltipster({
-    theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
-    // trigger: 'click',
-    contentCloning: true,
-    maxWidth: 378,
-    minWidth: 300,
-    side: 'right'
-  });
+  function initTooltips(){
+    var treeOptions = {
+      theme: ['tooltipster-noir', 'tooltipster-noir-customized'],
+      contentCloning: true,
+      maxWidth: 378,
+      minWidth: 300,
+      side: 'right'
+    }
 
-  $('.s_sheme__block').tooltipster({
-    theme: ['tooltipster-noir', 'tooltipster-noir-sheme'],
-    // trigger: 'click',
-    side: 'right',
-    arrow: false,
-    minWidth: 378,
+    var schemeOptions = {
+      theme: ['tooltipster-noir', 'tooltipster-noir-sheme'],
+      side: 'right',
+      arrow: false,
+      minWidth: 378,
+    }
 
-  });
+    if ( isMobile() ){
+      treeOptions = $.extend(treeOptions, {trigger: 'click'})
+      schemeOptions = $.extend(schemeOptions, {trigger: 'click'})
+    }
+
+    $('.s_img__label').tooltipster(treeOptions);
+
+    $('.s_sheme__block').tooltipster(schemeOptions);
+  }
+
+  initTooltips()
 
   // $('.s_img__label').on('click', function(event) {
   //   $('.s_img__label').removeClass('active')
