@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "surge --project . --domain smartleopard.surge.sh"
+    "deploy": "surge --project ./app --domain smartleopard.surge.sh"
   },
   "author": "WebDesign Master",
   "license": "ISC",
