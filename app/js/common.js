@@ -182,4 +182,43 @@ $(function() {
 
 
 
+  // Pows animation
+  function powsAnimation(){
+    var $svgs = $('.js-pows')
+    if ( $svgs.length === 0 ) return
+
+    $svgs.each(function(i, svg){
+      var $svg = $(svg)
+      var $pows = $svg.find('g[id*="pow"]')
+
+      if ( $pows.length === 0 ) return
+
+      // interate over each svg pow group
+      $pows.each(function(i, pow){
+        var $pow = $(pow)
+        var elWatcher = scrollMonitor.create( $pow );
+
+        elWatcher.enterViewport(throttle(function() {
+          // console.log($pow.attr("id") + " enters viewport")
+          $pow.addClass('is-animated')
+          $pow.css({'opacity': .6})
+
+        }, 200, {
+          'leading': true
+        }));
+
+        elWatcher.exitViewport(throttle(function() {
+          // console.log($pow.attr("id") + " exit viewport")
+          $pow.removeClass('is-animated')
+          $pow.css({'opacity': 0})
+
+        }, 100));
+      });
+    })
+  }
+
+  powsAnimation();
+
+
+
 });
