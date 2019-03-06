@@ -23,7 +23,7 @@ gulp.task('js', function() {
 		'app/libs/aos-master/dist/aos.js',
 		'app/libs/tooltipster-master/dist/js/tooltipster.bundle.min.js',
 		'app/libs/scrollmonitor.js',
-		'app/libs/anime-master/lib/anime.js',
+		'app/libs/anime-master/anime.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
