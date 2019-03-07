@@ -1081,15 +1081,15 @@ a
 		max-width: 704px
 		padding: 68px 57px
 		.popup__text
-			// max-height: calc(100vh - 162px)
-			height: auto
+			max-height: calc(100vh - 162px)
+			// height: auto
 		.mCSB_scrollTools .mCSB_draggerContainer
 			right: -10px !important
 
 
 	&__text
-		// max-height: calc(100vh - 194px)
-		height: auto
+		max-height: calc(100vh - 194px)
+		// height: auto
 	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
 		width: 8px
 		background: #A5A5A5
@@ -1669,6 +1669,8 @@ a
 		font-size: 16px
 	.popup__text
 		max-height: calc(100vh - 100px)
+		&.mCustomScrollbar
+			padding-right: 35px
 	.s_contact__label
 		box-shadow: 0 5px 29px #c2d3ac
 	.mCSB_outside+.mCSB_scrollTools

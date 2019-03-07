@@ -66,7 +66,7 @@ $(function() {
 
   $('.popup__text').mCustomScrollbar({
     axis: "y",
-    scrollbarPosition: 'outside'
+    scrollbarPosition: 'outside',
   })
 
   $('.anchor').anchor();
